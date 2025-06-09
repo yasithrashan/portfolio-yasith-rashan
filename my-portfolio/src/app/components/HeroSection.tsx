@@ -2,16 +2,10 @@
 
 import React from 'react';
 import Image from 'next/image';
-import profilePic from '../assets/profile-img.jpg'; // adjust the path if needed
+import profilePic from '../assets/profile-img.jpg'; 
 
 import { Github, Linkedin, Mail, ExternalLink, PenLine, ArrowDown } from 'lucide-react';
 import { FaInstagram, FaFacebookF, FaXTwitter } from 'react-icons/fa6';
-
-
-
-
-
-
 
 const HeroSection = () => {
     return (
@@ -23,12 +17,12 @@ const HeroSection = () => {
             </div>
 
             {/* Main Content */}
-            <div className="relative z-10 min-h-screen flex items-center justify-center px-6">
+            <div className="relative z-10 min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-10 lg:px-20">
                 <div className="max-w-6xl mx-auto text-center">
 
                     {/* Profile Image */}
                     <div className="mt-8 mb-12">
-                        <div className="w-32 h-32 mx-auto rounded-full border-2 border-white/20 overflow-hidden backdrop-blur-sm bg-white/5 flex items-center justify-center group hover:border-white/40 transition-all duration-500 relative">
+                        <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mx-auto rounded-full border-2 border-white/20 overflow-hidden backdrop-blur-sm bg-white/5 flex items-center justify-center group hover:border-white/40 transition-all duration-500 relative">
                             <Image
                                 src={profilePic}
                                 alt="Yasith Rashan"
@@ -40,12 +34,9 @@ const HeroSection = () => {
                         </div>
                     </div>
 
-
-
-
                     {/* Name and Title */}
                     <div className="mb-16 space-y-6">
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight">
                             <span className="block">Yasith</span>
                             <span className="block text-white/60">Rashan</span>
                         </h1>
@@ -70,7 +61,7 @@ const HeroSection = () => {
 
                     {/* Stats */}
                     <div className="mb-16">
-                        <div className="grid grid-cols-3 gap-8 md:gap-16 max-w-2xl mx-auto">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-12 max-w-2xl mx-auto">
                             <div className="text-center group">
                                 <div className="text-3xl md:text-4xl font-bold mb-2 group-hover:text-white/90 transition-colors">25+</div>
                                 <div className="text-sm md:text-base text-white/50 uppercase tracking-wider">Projects</div>
@@ -88,7 +79,7 @@ const HeroSection = () => {
 
                     {/* Tech Stack */}
                     <div className="mb-16">
-                        <div className="flex flex-wrap justify-center gap-4 max-w-2xl mx-auto">
+                        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 max-w-2xl mx-auto">
                             {['Next.js', 'React', 'TypeScript', 'Node.js', 'Tailwind', 'MongoDB'].map((tech) => (
                                 <span
                                     key={tech}
@@ -160,11 +151,9 @@ const HeroSection = () => {
                         </div>
                     </div>
 
-
-
                     {/* CTA Buttons */}
                     <div className="mb-16">
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-full sm:max-w-md mx-auto px-4 sm:px-0">
                             <button className="px-8 py-4 bg-white text-black font-medium rounded-full hover:bg-white/90 transition-all duration-300 transform hover:scale-105">
                                 View Projects
                             </button>

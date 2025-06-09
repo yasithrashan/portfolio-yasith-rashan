@@ -8,6 +8,16 @@ import { Github, Linkedin, Mail, ExternalLink, PenLine, ArrowDown } from 'lucide
 import { FaInstagram, FaFacebookF, FaXTwitter } from 'react-icons/fa6';
 
 const HeroSection = () => {
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Background Elements */}
@@ -150,7 +160,10 @@ const HeroSection = () => {
           {/* CTA Buttons */}
           <div className="mb-12 px-4 sm:px-0">
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-xs mx-auto">
-              <button className="px-6 py-3 bg-white text-black font-medium rounded-full hover:bg-white/90 transition transform hover:scale-105">
+              <button 
+                onClick={scrollToProjects}
+                className="px-6 py-3 bg-white text-black font-medium rounded-full hover:bg-white/90 transition transform hover:scale-105"
+              >
                 View Projects
               </button>
               <button className="px-6 py-3 border border-white/40 text-white font-medium rounded-full hover:bg-white/5 hover:border-white/60 transition">

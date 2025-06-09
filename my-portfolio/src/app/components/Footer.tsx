@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white border-t border-white/10 py-12">
       <div className="max-w-4xl mx-auto text-center px-6">
-        <h3 className="text-2xl font-bold mb-1">Yasith Rashan</h3>
+        <h3 className="text-xl font-bold mb-1">Yasith Rashan</h3>
         <p className="text-white/60 text-sm uppercase mb-4">Software Engineer Intern</p>
 
         <button

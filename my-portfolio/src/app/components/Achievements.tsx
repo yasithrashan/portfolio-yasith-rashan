@@ -4,8 +4,7 @@ import React from 'react';
 import { Trophy } from 'lucide-react';
 
 const Achievements = () => {
-  const certificates = [];
-
+  
   const achievements = [
     {
       id: 1,

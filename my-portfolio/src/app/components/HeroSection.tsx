@@ -109,7 +109,7 @@ const HeroSection = () => {
                 icon: <Linkedin className="w-5 h-5 text-white/60 group-hover:text-white" />,
                 label: 'LinkedIn'
               }, {
-                href: 'mailto:y.rashan22@gmail.com',
+                href: 'mailto:@gmail.com',
                 icon: <Mail className="w-5 h-5 text-white/60 group-hover:text-white" />,
                 label: 'Email'
               }, {

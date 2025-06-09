@@ -7,12 +7,14 @@ export const metadata = {
 
 import AboutMe from "./components/AboutMe";
 import HeroSection from "./components/HeroSection";
+import Projects from "./components/Projects";
 
 export default function Home() {
   return (
     <div>
       <HeroSection />
       <AboutMe />
+      <Projects />
     </div>
   );
 }

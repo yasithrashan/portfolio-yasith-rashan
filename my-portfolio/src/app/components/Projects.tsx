@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { ExternalLink, Github, Code, Brain, Lightbulb, Target, Users, Rocket } from 'lucide-react';
 
 const Projects = () => {
@@ -76,9 +77,11 @@ const Projects = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-16">
             <div className="space-y-6">
               <div className="relative overflow-hidden rounded-lg border border-white/20 group hover:border-white/40 transition-all duration-500">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop&crop=center"
                   alt="Developer workspace"
+                  width={600}
+                  height={400}
                   className="w-full h-64 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
@@ -86,7 +89,7 @@ const Projects = () => {
               <div className="space-y-4">
                 <h3 className="text-xl sm:text-2xl font-semibold mb-4">Building Solutions</h3>
                 <p className="text-sm sm:text-base text-white/70 leading-relaxed font-light">
-                  Over the past few years, I've worked on diverse projects ranging from full-stack web applications to algorithm-heavy systems.
+                  Over the past few years, I&apos;ve worked on diverse projects ranging from full-stack web applications to algorithm-heavy systems.
                 </p>
                 <p className="text-sm sm:text-base text-white/70 leading-relaxed font-light">
                   My portfolio spans multiple domains, showcasing adaptability across frontend, backend, and algorithmic problem-solving.
@@ -130,9 +133,11 @@ const Projects = () => {
                 <div key={project.id} className="flex flex-col sm:flex-row gap-6 group">
                   <div className="sm:w-32 flex-shrink-0">
                     <div className="relative overflow-hidden rounded border border-white/20 group-hover:border-white/30 transition-all duration-300">
-                      <img
+                      <Image
                         src={project.image}
                         alt={project.title}
+                        width={120}
+                        height={80}
                         className="w-full h-16 sm:h-20 object-cover"
                       />
                       <div className="absolute inset-0 bg-black/30"></div>
@@ -192,7 +197,7 @@ const Projects = () => {
           {/* CTA */}
           <div className="text-center mt-16">
             <p className="text-white/70 mb-8 max-w-2xl mx-auto">
-              Interested in seeing more of my work? Visit my GitHub or let’s collaborate.
+              Interested in seeing more of my work? Visit my GitHub or let&apos;s collaborate.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-xs mx-auto">
               <a

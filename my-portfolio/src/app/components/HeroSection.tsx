@@ -1,6 +1,9 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
+import profilePic from '../assets/profile-img.jpg'; // adjust the path if needed
+
 import { ArrowDown, Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
 
 const HeroSection = () => {
@@ -18,14 +21,18 @@ const HeroSection = () => {
 
             {/* Profile Image */}
             <div className="mt-8 mb-12">
-            <div className="w-32 h-32 mx-auto rounded-full border-2 border-white/20 overflow-hidden backdrop-blur-sm bg-white/5 flex items-center justify-center group hover:border-white/40 transition-all duration-500">
-                <img
-                src="/profile.jpg"
+            <div className="w-32 h-32 mx-auto rounded-full border-2 border-white/20 overflow-hidden backdrop-blur-sm bg-white/5 flex items-center justify-center group hover:border-white/40 transition-all duration-500 relative">
+                <Image
+                src={profilePic}
                 alt="Yasith Rashan"
-                className="w-full h-full object-cover"
+                fill
+                quality={100}
+                className="object-cover"
+                sizes="128px"
                 />
             </div>
             </div>
+
 
         
 

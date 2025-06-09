@@ -31,13 +31,6 @@ const Achievements = () => {
     }
   ];
 
-  const stats = [
-    { number: "3+", label: "Major Awards" },
-    { number: "25+", label: "Projects" },
-    { number: "3+", label: "Years Experience" },
-    { number: "15+", label: "Technologies" }
-  ];
-
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Main Content */}

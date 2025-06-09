@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Award, Trophy, Medal, ExternalLink, Calendar, CheckCircle } from 'lucide-react';
+import { Trophy } from 'lucide-react';
 
 const Achievements = () => {
   const certificates = [];
@@ -67,7 +67,7 @@ const Achievements = () => {
             </p>
           </div>
 
-
+      
           {/* Notable Achievements Section */}
           <div className="mb-16">
             <h3 className="text-xl sm:text-2xl font-semibold mb-8 text-center">Key Milestones</h3>

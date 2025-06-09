@@ -4,7 +4,6 @@ import React from 'react';
 import { Trophy } from 'lucide-react';
 
 const Achievements = () => {
-  
   const achievements = [
     {
       id: 1,
@@ -66,7 +65,6 @@ const Achievements = () => {
             </p>
           </div>
 
-      
           {/* Notable Achievements Section */}
           <div className="mb-16">
             <h3 className="text-xl sm:text-2xl font-semibold mb-8 text-center">Key Milestones</h3>

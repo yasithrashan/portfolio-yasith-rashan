@@ -118,7 +118,7 @@ const Projects = () => {
                       </div>
 
                       {/* Links Overlay */}
-                      <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute top-4 right-4 flex space-x-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
                         <a
                           href={project.github}
                           target="_blank"

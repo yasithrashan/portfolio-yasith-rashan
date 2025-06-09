@@ -6,7 +6,8 @@ export const metadata = {
 };
 
 import AboutMe from "./components/AboutMe";
-import CertificatesAchievements from "./components/Achievements";
+import Achievements from "./components/Achievements";
+import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import Projects from "./components/Projects";
 
@@ -16,7 +17,8 @@ export default function Home() {
       <HeroSection />
       <AboutMe />
       <Projects />
-      <CertificatesAchievements />
+      <Achievements />
+      <Footer />
     </div>
   );
 }

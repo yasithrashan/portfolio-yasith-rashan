@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Github, ExternalLink, Code, Database, Globe, Zap } from 'lucide-react';
+import { Github, ExternalLink } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -12,7 +12,6 @@ const Projects = () => {
       github: "https://github.com/yasithrashan/Spacefix-app",
       demo: "https://www.spacefix.lk/",
       image: "https://images.unsplash.com/photo-1590579491624-f98f36d4c763?q=80&w=2043&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      icon: <Database className="w-5 h-5" />,
       featured: true
     },
     {
@@ -22,7 +21,6 @@ const Projects = () => {
       github: "https://github.com/yasithrashan/Real-Time-Event-Ticketing-System",
       demo: "",
       image: "https://images.unsplash.com/photo-1606021643583-b707947f1f02?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      icon: <Zap className="w-5 h-5" />,
       featured: true
     },
     {
@@ -32,7 +30,6 @@ const Projects = () => {
       github: "https://github.com/yasithrashan/Yasith-Rashan-Portfolio",
       demo: "https://www.yasithrashan.online/",
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      icon: <Globe className="w-5 h-5" />,
       featured: false
     },
     {
@@ -42,7 +39,6 @@ const Projects = () => {
       github: "https://github.com/yasithrashan/network-flow-algorithm",
       demo: "",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      icon: <Code className="w-5 h-5" />,
       featured: false
     },
     {
@@ -52,7 +48,6 @@ const Projects = () => {
       github: "https://github.com/yasithrashan/BookStoreAPIWebApplication",
       demo: "",
       image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=2090&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      icon: <Database className="w-5 h-5" />,
       featured: false
     }
   ];
@@ -107,15 +102,6 @@ const Projects = () => {
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
-                      
-                      {/* Project Icon */}
-                      <div className="absolute top-4 left-4">
-                        <div className="w-10 h-10 border border-white/30 rounded-full flex items-center justify-center bg-black/40 backdrop-blur-sm">
-                          <div className="text-white/70">
-                            {project.icon}
-                          </div>
-                        </div>
-                      </div>
 
                       {/* Links Overlay */}
                       <div className="absolute top-4 right-4 flex space-x-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
@@ -176,10 +162,7 @@ const Projects = () => {
                 <div key={index} className="group">
                   <div className="border border-white/20 rounded-lg p-6 hover:border-white/40 hover:bg-white/5 transition-all duration-300 h-full flex flex-col">
                     {/* Project Header */}
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="text-white/60 group-hover:text-white transition-colors">
-                        {project.icon}
-                      </div>
+                    <div className="flex items-start justify-end mb-4">
                       <div className="flex space-x-2">
                         <a
                           href={project.github}

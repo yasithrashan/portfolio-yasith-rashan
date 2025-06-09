@@ -1,170 +1,233 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
-import { ExternalLink, Github, Code, Brain, Lightbulb, Target, Users, Rocket } from 'lucide-react';
+import { Github, ExternalLink, Code, Database, Globe, Zap } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
     {
-      id: 1,
-      title: "University Management App - Spacefix",
-      description: "A comprehensive university management system enabling seamless student enrollment, course management, and faculty administration with modern UI/UX design.",
-      tech: ["React", "Node.js", "Firebase", "JavaScript"],
-      githubUrl: "https://github.com/yasithrashan/spacefix",
-      liveUrl: "https://spacefix.vercel.app",
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=120&h=80&fit=crop&crop=center"
+      name: "University Management App - Spacefix",
+      description: "A comprehensive university management system enabling seamless student enrollment, course management, and faculty administration.",
+      technologies: ["React", "Node.js", "Firebase", "JavaScript"],
+      github: "https://github.com/yasithrashan/Spacefix-app",
+      demo: "https://www.spacefix.lk/",
+      image: "https://images.unsplash.com/photo-1590579491624-f98f36d4c763?q=80&w=2043&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      icon: <Database className="w-5 h-5" />,
+      featured: true
     },
     {
-      id: 2,
-      title: "Real-Time Event Ticketing System",
-      description: "A dynamic event ticketing platform that provides real-time seat availability, secure bookings, and payment processing with live updates.",
-      tech: ["Java", "OOP", "Spring Boot", "React"],
-      githubUrl: "https://github.com/yasithrashan/event-ticketing",
-      liveUrl: "#",
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=120&h=80&fit=crop&crop=center"
+      name: "Real-Time Event Ticketing System",
+      description: "A dynamic event ticketing platform that provides real-time seat availability, secure bookings.",
+      technologies: ["Java", "OOP", "Spring Boot", "React"],
+      github: "https://github.com/yasithrashan/Real-Time-Event-Ticketing-System",
+      demo: "",
+      image: "https://images.unsplash.com/photo-1606021643583-b707947f1f02?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      icon: <Zap className="w-5 h-5" />,
+      featured: true
     },
     {
-      id: 3,
-      title: "Personal Portfolio",
-      description: "A sleek and responsive personal portfolio website showcasing projects, skills, and experience with modern animations and clean design.",
-      tech: ["React", "Tailwind CSS", "JavaScript"],
-      githubUrl: "https://github.com/yasithrashan/portfolio",
-      liveUrl: "https://yasithrashan.vercel.app",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=120&h=80&fit=crop&crop=center"
+      name: "Personal Portfolio",
+      description: "A sleek and responsive personal portfolio website showcasing my projects, skills, and experience, built with React and Tailwind CSS.",
+      technologies: ["React", "Tailwind CSS", "JavaScript"],
+      github: "https://github.com/yasithrashan/Yasith-Rashan-Portfolio",
+      demo: "https://www.yasithrashan.online/",
+      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      icon: <Globe className="w-5 h-5" />,
+      featured: false
     },
     {
-      id: 4,
-      title: "Network Flow Algorithm Implementation",
-      description: "Implementation of the Ford-Fulkerson algorithm with Edmonds-Karp improvement for finding maximum flow in networks with graph theory principles.",
-      tech: ["Java", "OOP", "Algorithms", "Data Structures", "Graph Theory"],
-      githubUrl: "https://github.com/yasithrashan/network-flow",
-      liveUrl: "#",
-      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=120&h=80&fit=crop&crop=center"
+      name: "Network Flow Algorithm Implementation",
+      description: "An implementation of the Ford-Fulkerson algorithm with the Edmonds-Karp improvement for finding maximum flow in a network. Handles integer capacities and follows the conservation of flow principle.",
+      technologies: ["Java", "OOP", "Algorithms", "Data Structures", "Graph Theory"],
+      github: "https://github.com/yasithrashan/network-flow-algorithm",
+      demo: "",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      icon: <Code className="w-5 h-5" />,
+      featured: false
     },
     {
-      id: 5,
-      title: "Bookstore RESTful API",
-      description: "A comprehensive JAX-RS API for bookstore operations with endpoints for managing books, authors, customers, shopping carts, and orders.",
-      tech: ["Java", "JAX-RS", "REST API", "JSON", "Maven", "Java 21"],
-      githubUrl: "https://github.com/yasithrashan/bookstore-api",
-      liveUrl: "#",
-      image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=120&h=80&fit=crop&crop=center"
+      name: "Bookstore RESTful API",
+      description: "A comprehensive JAX-RS API for a bookstore application with endpoints for managing books, authors, customers, shopping carts, and orders following REST architectural principles.",
+      technologies: ["Java", "JAX-RS", "REST API", "JSON", "Maven", "Java 21"],
+      github: "https://github.com/yasithrashan/BookStoreAPIWebApplication",
+      demo: "",
+      image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=2090&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      icon: <Database className="w-5 h-5" />,
+      featured: false
     }
   ];
 
+  const featuredProjects = projects.filter(project => project.featured);
+  const otherProjects = projects.filter(project => !project.featured);
+
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-white opacity-5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-40 h-40 sm:w-64 sm:h-64 bg-white opacity-3 rounded-full blur-3xl"></div>
+      </div>
+
+      {/* Main Content */}
       <div className="relative z-10 min-h-screen flex items-center justify-center px-6 sm:px-10 md:px-16 lg:px-24 py-20">
-        <div className="max-w-full sm:max-w-6xl">
+        <div className="max-w-full sm:max-w-7xl w-full">
 
           {/* Section Header */}
           <div className="text-center mb-16">
             <div className="flex items-center justify-center space-x-3 mb-8">
               <div className="h-px bg-white/20 w-12 sm:w-16"></div>
               <p className="text-sm sm:text-base text-white/80 font-light tracking-wide uppercase">
-                My Work
+                Portfolio
               </p>
               <div className="h-px bg-white/20 w-12 sm:w-16"></div>
             </div>
+
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight mb-6">
               <span className="block">Featured</span>
               <span className="block text-white/60">Projects</span>
             </h2>
+
+            <p className="text-sm sm:text-base text-white/70 leading-relaxed font-light max-w-2xl mx-auto">
+              A showcase of my technical journey through various projects, 
+              from full-stack applications to algorithmic implementations.
+            </p>
           </div>
 
-          {/* Overview Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-16">
-            <div className="space-y-6">
-              <div className="relative overflow-hidden rounded-lg border border-white/20 group hover:border-white/40 transition-all duration-500">
-                <Image
-                  src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop&crop=center"
-                  alt="Developer workspace"
-                  width={600}
-                  height={400}
-                  className="w-full h-64 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-              </div>
-              <div className="space-y-4">
-                <h3 className="text-xl sm:text-2xl font-semibold mb-4">Building Solutions</h3>
-                <p className="text-sm sm:text-base text-white/70 leading-relaxed font-light">
-                  Over the past few years, I&apos;ve worked on diverse projects ranging from full-stack web applications to algorithm-heavy systems.
-                </p>
-                <p className="text-sm sm:text-base text-white/70 leading-relaxed font-light">
-                  My portfolio spans multiple domains, showcasing adaptability across frontend, backend, and algorithmic problem-solving.
-                </p>
-              </div>
-            </div>
-
-            {/* Tech Stack Cards */}
-            <div className="space-y-8">
-              <h3 className="text-xl sm:text-2xl font-semibold mb-6">Tech Stack</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
-                  { icon: <Code className="w-5 h-5" />, label: 'Full-Stack', desc: 'React, Node.js, Java Spring' },
-                  { icon: <Brain className="w-5 h-5" />, label: 'Algorithms', desc: 'Data structures & optimization' },
-                  { icon: <Lightbulb className="w-5 h-5" />, label: 'Modern UI', desc: 'Responsive & interactive design' },
-                  { icon: <Target className="w-5 h-5" />, label: 'API Design', desc: 'RESTful & scalable backends' }
-                ].map(({ icon, label, desc }) => (
-                  <div key={label} className="group">
-                    <div className="border border-white/20 rounded-lg p-4 hover:border-white/40 hover:bg-white/5 transition-all duration-300">
-                      <div className="flex items-center space-x-3 mb-2">
-                        <div className="text-white/60 group-hover:text-white transition-colors">
-                          {icon}
+          {/* Featured Projects */}
+          <div className="mb-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {featuredProjects.map((project, index) => (
+                <div key={index} className="group relative">
+                  <div className="border border-white/20 rounded-xl overflow-hidden hover:border-white/40 transition-all duration-500 hover:transform hover:scale-[1.02] bg-black/40 backdrop-blur-sm">
+                    {/* Project Image */}
+                    <div className="relative h-48 sm:h-56 overflow-hidden">
+                      <img 
+                        src={project.image} 
+                        alt={project.name}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
+                      
+                      {/* Project Icon */}
+                      <div className="absolute top-4 left-4">
+                        <div className="w-10 h-10 border border-white/30 rounded-full flex items-center justify-center bg-black/40 backdrop-blur-sm">
+                          <div className="text-white/70">
+                            {project.icon}
+                          </div>
                         </div>
-                        <span className="font-medium text-sm sm:text-base">{label}</span>
                       </div>
-                      <p className="text-xs sm:text-sm text-white/50 group-hover:text-white/70 transition-colors">
-                        {desc}
+
+                      {/* Links Overlay */}
+                      <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-10 h-10 border border-white/30 rounded-full flex items-center justify-center bg-black/60 backdrop-blur-sm hover:bg-black/80 transition-colors"
+                        >
+                          <Github className="w-4 h-4 text-white" />
+                        </a>
+                        {project.demo && (
+                          <a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-10 h-10 border border-white/30 rounded-full flex items-center justify-center bg-black/60 backdrop-blur-sm hover:bg-black/80 transition-colors"
+                          >
+                            <ExternalLink className="w-4 h-4 text-white" />
+                          </a>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Project Details */}
+                    <div className="p-6">
+                      <h3 className="text-lg sm:text-xl font-semibold mb-3 group-hover:text-white/90 transition-colors">
+                        {project.name}
+                      </h3>
+                      
+                      <p className="text-sm text-white/70 leading-relaxed mb-4 group-hover:text-white/80 transition-colors">
+                        {project.description}
+                      </p>
+
+                      {/* Technologies */}
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech, techIndex) => (
+                          <span
+                            key={techIndex}
+                            className="px-2 py-1 border border-white/20 rounded text-xs text-white/60 group-hover:border-white/30 group-hover:text-white/70 transition-colors"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Other Projects */}
+          <div className="mb-16">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-8 text-center">Other Projects</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {otherProjects.map((project, index) => (
+                <div key={index} className="group">
+                  <div className="border border-white/20 rounded-lg p-6 hover:border-white/40 hover:bg-white/5 transition-all duration-300 h-full flex flex-col">
+                    {/* Project Header */}
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="text-white/60 group-hover:text-white transition-colors">
+                        {project.icon}
+                      </div>
+                      <div className="flex space-x-2">
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-white/50 hover:text-white transition-colors"
+                        >
+                          <Github className="w-4 h-4" />
+                        </a>
+                        {project.demo && (
+                          <a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white/50 hover:text-white transition-colors"
+                          >
+                            <ExternalLink className="w-4 h-4" />
+                          </a>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Project Content */}
+                    <div className="flex-1">
+                      <h4 className="font-semibold mb-2 group-hover:text-white/90 transition-colors text-sm sm:text-base">
+                        {project.name}
+                      </h4>
+                      
+                      <p className="text-xs sm:text-sm text-white/70 leading-relaxed mb-4 group-hover:text-white/80 transition-colors">
+                        {project.description}
                       </p>
                     </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
 
-          {/* Projects Listing */}
-          <div className="mb-16">
-            <h3 className="text-xl sm:text-2xl font-semibold mb-8 text-center">Recent Projects</h3>
-            <div className="max-w-4xl mx-auto space-y-8">
-              {projects.map((project) => (
-                <div key={project.id} className="flex flex-col sm:flex-row gap-6 group">
-                  <div className="sm:w-32 flex-shrink-0">
-                    <div className="relative overflow-hidden rounded border border-white/20 group-hover:border-white/30 transition-all duration-300">
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        width={120}
-                        height={80}
-                        className="w-full h-16 sm:h-20 object-cover"
-                      />
-                      <div className="absolute inset-0 bg-black/30"></div>
-                    </div>
-                  </div>
-                  <div className="flex-1 border-l border-white/20 pl-6 group-hover:border-white/40 transition-colors">
-                    <h4 className="font-semibold text-white group-hover:text-white/90 transition-colors mb-2">{project.title}</h4>
-                    <p className="text-white/70 text-sm leading-relaxed mb-3">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.tech.map((tech) => (
+                    {/* Technologies */}
+                    <div className="flex flex-wrap gap-1">
+                      {project.technologies.slice(0, 3).map((tech, techIndex) => (
                         <span
-                          key={tech}
-                          className="px-2 py-1 border border-white/20 rounded text-xs text-white/60 hover:border-white/40 hover:text-white/80 transition cursor-default"
+                          key={techIndex}
+                          className="px-2 py-1 border border-white/20 rounded text-xs text-white/60 group-hover:border-white/30 group-hover:text-white/70 transition-colors"
                         >
                           {tech}
                         </span>
                       ))}
-                    </div>
-                    <div className="flex gap-3">
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 px-3 py-1.5 bg-white/10 text-white text-xs rounded hover:bg-white/20 transition">
-                        <ExternalLink className="w-3 h-3" />
-                        <span>Demo</span>
-                      </a>
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 px-3 py-1.5 border border-white/30 text-white text-xs rounded hover:border-white/50 hover:bg-white/5 transition">
-                        <Github className="w-3 h-3" />
-                        <span>Code</span>
-                      </a>
+                      {project.technologies.length > 3 && (
+                        <span className="px-2 py-1 text-xs text-white/40">
+                          +{project.technologies.length - 3}
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -172,47 +235,21 @@ const Projects = () => {
             </div>
           </div>
 
-          {/* Philosophy Section */}
-          <div className="text-center max-w-4xl mx-auto">
-            <h3 className="text-xl sm:text-2xl font-semibold mb-8">Development Approach</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                { icon: <Users className="w-6 h-6" />, title: 'User-Centric', description: 'Every feature designed with the end user in mind' },
-                { icon: <Rocket className="w-6 h-6" />, title: 'Performance', description: 'Optimized code for speed and scalability' },
-                { icon: <Target className="w-6 h-6" />, title: 'Best Practices', description: 'Clean code, proper architecture, and documentation' }
-              ].map(({ icon, title, description }) => (
-                <div key={title} className="group text-center">
-                  <div className="w-16 h-16 border border-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:border-white/40 group-hover:bg-white/5 transition-all duration-300">
-                    <div className="text-white/60 group-hover:text-white transition-colors">{icon}</div>
-                  </div>
-                  <h4 className="font-semibold mb-2 group-hover:text-white/90 transition-colors">{title}</h4>
-                  <p className="text-sm text-white/70 leading-relaxed group-hover:text-white/80 transition-colors">
-                    {description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* CTA */}
-          <div className="text-center mt-16">
+          {/* Call to Action */}
+          <div className="text-center">
             <p className="text-white/70 mb-8 max-w-2xl mx-auto">
-              Interested in seeing more of my work? Visit my GitHub or let&apos;s collaborate.
+              Want to see more of my work or collaborate on a project? 
+              Check out my GitHub for additional repositories and contributions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-xs mx-auto">
-              <a
-                href="https://github.com/yasithrashan"
-                className="px-6 py-3 bg-white text-black font-medium rounded-full hover:bg-white/90 transition transform hover:scale-105"
-              >
-                View GitHub
-              </a>
-              <a
-                href="mailto:yasithrashan.dev@gmail.com"
-                className="px-6 py-3 border border-white/40 text-white font-medium rounded-full hover:bg-white/5 hover:border-white/60 transition"
-              >
-                Get in Touch
-              </a>
-            </div>
+            <a
+              href="https://github.com/yasithrashan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-2 px-6 py-3 border border-white/40 text-white font-medium rounded-full hover:bg-white/5 hover:border-white/60 transition"
+            >
+              <Github className="w-4 h-4" />
+              <span>View All Projects</span>
+            </a>
           </div>
         </div>
       </div>

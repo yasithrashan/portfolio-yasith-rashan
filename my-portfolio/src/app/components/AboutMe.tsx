@@ -104,7 +104,7 @@ const AboutMe = () => {
                                 {[
                                     {
                                         period: 'Jun 2025 – Present',
-                                        title: 'Engineering Intern',
+                                        title: 'Software Engineering Intern',
                                         organization: 'WSO2',
                                         description:
                                             'Working with the Engineering team to develop and enhance WSO2’s enterprise middleware solutions and open-source integration platform.',

@@ -1,2 +1,3 @@
-# Portfolio-Yasith-Rashan
-A modern and responsive portfolio showcasing my work, skills, and achievements. Built with clean code, dynamic components, and a sleek UI to highlight my professional journey.
+# Portfolio - Yasith Rashan
+
+A modern and responsive personal portfolio website built with Next.js and TypeScript. This portfolio showcases my work, skills, and professional achievements with a clean, dynamic interface optimized for all devices.

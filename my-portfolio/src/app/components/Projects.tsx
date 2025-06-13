@@ -76,7 +76,6 @@ const Projects = () => {
 
           {/* Projects Section */}
           <div className="mb-16">
-            <h3 className="text-xl sm:text-2xl font-semibold mb-8 text-center">My Work</h3>
             <div className="max-w-4xl mx-auto">
               <div className="space-y-8">
                 {projects.map((project, index) => (

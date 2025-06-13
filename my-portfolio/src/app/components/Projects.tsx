@@ -54,15 +54,9 @@ const Projects = () => {
 
   return (
     <div id="projects" className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-white opacity-5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-40 h-40 sm:w-64 sm:h-64 bg-white opacity-3 rounded-full blur-3xl"></div>
-      </div>
-
       {/* Main Content */}
       <div className="relative z-10 min-h-screen flex items-center justify-center px-6 sm:px-10 md:px-16 lg:px-24 py-20">
-        <div className="max-w-full sm:max-w-7xl w-full">
+        <div className="max-w-full sm:max-w-6xl">
 
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -75,93 +69,108 @@ const Projects = () => {
             </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight mb-6">
-              <span className="block">My</span>
+              <span className="block">Featured</span>
               <span className="block text-white/60">Projects</span>
             </h2>
-
-            <p className="text-sm sm:text-base text-white/70 leading-relaxed font-light max-w-2xl mx-auto">
-              A showcase of my technical journey through various projects, 
-              from full-stack applications to algorithmic implementations.
-            </p>
           </div>
 
-          {/* All Projects */}
+          {/* Projects Section */}
           <div className="mb-16">
-            <div className="space-y-4">
-              {projects.map((project, index) => (
-                <div key={index} className="group">
-                  <div className="border border-white/20 rounded-lg hover:border-white/40 hover:bg-white/5 transition-all duration-300 overflow-hidden">
-                    <div className="flex flex-col sm:flex-row">
-                      {/* Project Image - Left side */}
-                      <div className="w-full sm:w-48 h-32 sm:h-auto relative overflow-hidden">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-8 text-center">My Work</h3>
+            <div className="max-w-4xl mx-auto">
+              <div className="space-y-8">
+                {projects.map((project, index) => (
+                  <div key={index} className="flex flex-col lg:flex-row gap-6 group">
+                    {/* Project Image */}
+                    <div className="lg:w-80 flex-shrink-0">
+                      <div className="relative overflow-hidden rounded-lg border border-white/20 group-hover:border-white/40 transition-colors">
                         <img 
                           src={project.image} 
                           alt={project.name}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          className="w-full h-48 lg:h-56 object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
                         
                         {/* Date Badge */}
-                        <div className="absolute top-2 left-2">
+                        <div className="absolute top-3 left-3">
                           <div className="flex items-center space-x-1 px-2 py-1 bg-black/60 backdrop-blur-sm rounded-full border border-white/20">
                             <Calendar className="w-3 h-3 text-white/70" />
-                            <span className="text-xs text-white/70">{project.date}</span>
+                            <span className="text-xs text-white/70 font-mono">{project.date}</span>
                           </div>
                         </div>
-                      </div>
 
-                      {/* Project Content - Right side */}
-                      <div className="flex-1 p-4 sm:p-6">
-                        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3">
-                          <h4 className="font-semibold mb-2 sm:mb-0 group-hover:text-white/90 transition-colors text-base sm:text-lg">
-                            {project.name}
-                          </h4>
-                          
-                          {/* Links - Better positioned for mobile */}
-                          <div className="flex space-x-3 sm:space-x-2 mb-3 sm:mb-0">
+                        {/* Links Overlay */}
+                        <div className="absolute top-3 right-3 flex space-x-2">
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-8 h-8 bg-black/60 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white/70 hover:text-white hover:border-white/40 transition-all duration-300"
+                          >
+                            <Github className="w-4 h-4" />
+                          </a>
+                          {project.demo && (
                             <a
-                              href={project.github}
+                              href={project.demo}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="flex items-center space-x-1 text-white/50 hover:text-white transition-colors text-sm"
+                              className="w-8 h-8 bg-black/60 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white/70 hover:text-white hover:border-white/40 transition-all duration-300"
                             >
-                              <Github className="w-4 h-4" />
-                              <span className="sm:hidden">GitHub</span>
+                              <ExternalLink className="w-4 h-4" />
                             </a>
-                            {project.demo && (
-                              <a
-                                href={project.demo}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center space-x-1 text-white/50 hover:text-white transition-colors text-sm"
-                              >
-                                <ExternalLink className="w-4 h-4" />
-                                <span className="sm:hidden">Demo</span>
-                              </a>
-                            )}
-                          </div>
-                        </div>
-                        
-                        <p className="text-sm text-white/70 leading-relaxed mb-4 group-hover:text-white/80 transition-colors">
-                          {project.description}
-                        </p>
-
-                        {/* Technologies */}
-                        <div className="flex flex-wrap gap-2">
-                          {project.technologies.map((tech, techIndex) => (
-                            <span
-                              key={techIndex}
-                              className="px-2 py-1 border border-white/20 rounded text-xs text-white/60 group-hover:border-white/30 group-hover:text-white/70 transition-colors"
-                            >
-                              {tech}
-                            </span>
-                          ))}
+                          )}
                         </div>
                       </div>
                     </div>
+
+                    {/* Project Content */}
+                    <div className="flex-1 border-l border-white/20 pl-6 group-hover:border-white/40 transition-colors">
+                      <h4 className="font-semibold text-white group-hover:text-white/90 transition-colors">
+                        {project.name}
+                      </h4>
+                      <p className="text-white/70 text-sm leading-relaxed mb-4 group-hover:text-white/80 transition-colors">
+                        {project.description}
+                      </p>
+
+                      {/* Technologies */}
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.technologies.map((tech, techIndex) => (
+                          <span
+                            key={techIndex}
+                            className="px-3 py-1 border border-white/20 rounded-full text-xs text-white/60 group-hover:border-white/30 group-hover:text-white/70 transition-colors"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Links for larger screens */}
+                      <div className="hidden sm:flex space-x-4">
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center space-x-2 text-white/50 hover:text-white transition-colors text-sm"
+                        >
+                          <Github className="w-4 h-4" />
+                          <span>View Code</span>
+                        </a>
+                        {project.demo && (
+                          <a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center space-x-2 text-white/50 hover:text-white transition-colors text-sm"
+                          >
+                            <ExternalLink className="w-4 h-4" />
+                            <span>Live Demo</span>
+                          </a>
+                        )}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
 

@@ -5,31 +5,32 @@ import { Trophy } from 'lucide-react';
 
 const Achievements = () => {
   const achievements = [
-    {
-      id: 1,
-      title: "Foundation Certificate Merit Pass",
-      description: "Awarded Merit Pass in Foundation Certificate in Higher Education for academic excellence",
-      date: "2024"
-    },
-    {
-      id: 2,
-      title: "IEEE Member",
-      description: "Active member of the Institute of Electrical and Electronics Engineers (IEEE)",
-      date: "2024"
-    },
-    {
-      id: 3,
-      title: "CodeSprint 8.0 Participant",
-      description: "Participated in CodeSprint 8.0, showcasing problem-solving and coding skills in a competitive setting",
-      date: "2024"
-    },
-    {
-      id: 4,
-      title: "Hult Prize 2025 Participant",
-      description: "Contributed to a social entrepreneurship project in the Hult Prize 2025 competition",
-      date: "2025"
-    }
-  ];
+  {
+    id: 1,
+    title: "Hult Prize 2025 Participant",
+    description: "Contributed to a social entrepreneurship project in the Hult Prize 2025 competition",
+    date: "2025"
+  },
+  {
+    id: 2,
+    title: "Foundation Certificate Merit Pass",
+    description: "Awarded Merit Pass in Foundation Certificate in Higher Education for academic excellence",
+    date: "2024"
+  },
+  {
+    id: 3,
+    title: "IEEE Member",
+    description: "Active member of the Institute of Electrical and Electronics Engineers (IEEE)",
+    date: "2024"
+  },
+  {
+    id: 4,
+    title: "CodeSprint 8.0 Participant",
+    description: "Participated in CodeSprint 8.0, showcasing problem-solving and coding skills in a competitive setting",
+    date: "2024"
+  }
+];
+
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">

@@ -6,6 +6,15 @@ import { Github, ExternalLink, Calendar } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
+      name: "Ballerina Elasticsearch Connector",
+      description: "A comprehensive Elasticsearch connector for Ballerina language providing seamless integration with Elasticsearch clusters. Features practical examples, comprehensive setup guides, and build automation with Gradle.",
+      technologies: ["Ballerina", "Elasticsearch", "Java", "Docker", "Gradle", "REST API"],
+      github: "https://github.com/yasithrashan/module-ballerinax-elasticsearch",
+      demo: "",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop",
+      date: "2025"
+    },
+    {
       name: "University Management App - Spacefix",
       description: "A comprehensive university management system enabling seamless student enrollment, course management, and faculty administration.",
       technologies: ["React", "Node.js", "Firebase", "JavaScript"],

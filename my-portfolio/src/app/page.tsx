@@ -3,9 +3,9 @@ export const metadata = {
   description: "Welcome to my personal portfolio website.",
   keywords: ["Yasith Rashan", "Yasith", "Portfolio"],
   authors: [{ name: "Yasith Rashan" }],
-  icons: {
-    icon: "/logo.svg",
-  },
+  // icons: {
+  //   icon: "/logo.svg",
+  // },
 };
 
 

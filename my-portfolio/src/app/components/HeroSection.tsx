@@ -127,7 +127,7 @@ const HeroSection = () => {
                 icon: <ExternalLink className="w-5 h-5 text-white/60 group-hover:text-white" />,
                 label: 'Website'
               }, {
-                href: 'https://medium.com/@y.rashan22',
+                href: 'https://medium.com/@yasithrashan',
                 icon: <PenLine className="w-5 h-5 text-white/60 group-hover:text-white" />,
                 label: 'Medium'
               }, {

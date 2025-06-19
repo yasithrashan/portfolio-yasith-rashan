@@ -33,11 +33,14 @@ const AboutMe = () => {
                             <div className="space-y-4">
                                 <h3 className="text-xl sm:text-2xl font-semibold mb-4">My Journey</h3>
                                 <p className="text-sm sm:text-base text-white/70 leading-relaxed font-light">
-                                    I&rsquo;m a passionate Software Engineer Intern based in Sri Lanka, driven by the endless possibilities
-                                    of technology and its power to transform ideas into reality. My journey began with curiosity
-                                    about how things work behind the screen, which evolved into a deep love for creating
-                                    intelligent, user-centric solutions.
+                                    I&rsquo;m a passionate Computer Science undergraduate and Software Engineering 
+                                    Intern with a strong interest in Artificial Intelligence, driven by the endless 
+                                    possibilities of technology and its power to transform ideas into reality. 
+                                    My journey began with curiosity about how things work behind the screen, 
+                                    which evolved into a deep love for creating intelligent, user-centric solutions.
                                 </p>
+                                
+
                                 <p className="text-sm sm:text-base text-white/70 leading-relaxed font-light">
                                     With over 3 years of experience and 25+ projects under my belt, I specialize in full-stack
                                     development with a particular focus on modern web technologies. I believe in writing clean,

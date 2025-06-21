@@ -73,7 +73,7 @@ const HeroSection = () => {
           <div className="mb-12 px-4 sm:px-0">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-xl mx-auto">
               <div className="text-center group">
-                <div className="text-2xl sm:text-3xl font-bold mb-1 group-hover:text-white/90 transition-colors">25+</div>
+                <div className="text-2xl sm:text-3xl font-bold mb-1 group-hover:text-white/90 transition-colors">20+</div>
                 <div className="text-xs sm:text-sm text-white/50 uppercase tracking-wider">Projects</div>
               </div>
               <div className="text-center group">

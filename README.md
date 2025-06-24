@@ -31,5 +31,5 @@ Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
 ## Contact
 
 - Email: y.rashan22@gmail.com
-- LinkedIn: [Your Profile](https://linkedin.com/in/yasithrashan)
-- GitHub: [Your GitHub](https://github.com/yasithrashan)
+- LinkedIn: [Yasith Rashan](https://linkedin.com/in/yasithrashan)
+- GitHub: [@yasithrashan](https://github.com/yasithrashan)

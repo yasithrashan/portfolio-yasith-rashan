@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Code, Brain, Lightbulb, Target, Users, Rocket } from 'lucide-react';
+import { Code, Brain, Lightbulb, Target } from 'lucide-react';
 
 const AboutMe = () => {
     return (
@@ -99,9 +99,9 @@ const AboutMe = () => {
                                         title: 'Software Engineering Intern',
                                         organization: 'WSO2',
                                         description:
-                                            'Working with the Engineering team to develop and enhance WSO2’s enterprise middleware solutions and open-source integration platform.',
+                                            "Working with the Engineering team to develop and enhance WSO2's enterprise middleware solutions and open-source integration platform.",
                                         bullets: [
-                                            'Onboarded to the Engineering team and familiarised with WSO2’s products and dev environment',
+                                            'Onboarded to the Engineering team and familiarised with WSO2\'s products and dev environment',
                                             'Collaborating with mentors and senior engineers on project workflows and codebases',
                                         ],
                                     },

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import profilePic from '../assets/profile-img.jpg'; 
+import profilePic from '../assets/profile-img.jpg';
 
 import { Github, Linkedin, Mail, ExternalLink, PenLine, ArrowDown } from 'lucide-react';
 import { FaInstagram, FaFacebookF, FaXTwitter } from 'react-icons/fa6';
@@ -11,7 +11,7 @@ const HeroSection = () => {
   const scrollToProjects = () => {
     const projectsSection = document.getElementById('projects');
     if (projectsSection) {
-      projectsSection.scrollIntoView({ 
+      projectsSection.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
       });
@@ -54,7 +54,7 @@ const HeroSection = () => {
             <div className="flex items-center justify-center space-x-3">
               <div className="h-px bg-white/20 w-12 sm:w-16"></div>
               <p className="text-sm sm:text-base text-white/80 font-light tracking-wide uppercase">
-                Software Engineer Intern
+                Software Engineer Intern @wso2
               </p>
               <div className="h-px bg-white/20 w-12 sm:w-16"></div>
             </div>
@@ -160,7 +160,7 @@ const HeroSection = () => {
           {/* CTA Buttons */}
           <div className="mb-12 px-4 sm:px-0">
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-xs mx-auto">
-              <button 
+              <button
                 onClick={scrollToProjects}
                 className="px-6 py-3 bg-white text-black font-medium rounded-full hover:bg-white/90 transition transform hover:scale-105"
               >

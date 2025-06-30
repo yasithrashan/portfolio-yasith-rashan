@@ -33,22 +33,11 @@ const AboutMe = () => {
                             <div className="space-y-4">
                                 <h3 className="text-xl sm:text-2xl font-semibold mb-4">My Journey</h3>
                                 <p className="text-sm sm:text-base text-white/70 leading-relaxed font-light">
-                                    I&rsquo;m a passionate Computer Science undergraduate and Software Engineering 
-                                    Intern with a strong interest in Artificial Intelligence, driven by the endless 
-                                    possibilities of technology and its power to transform ideas into reality. 
-                                    My journey began with curiosity about how things work behind the screen, 
+                                    I&rsquo;m a passionate Computer Science undergraduate and Software Engineering
+                                    Intern with a strong interest in Artificial Intelligence, driven by the endless
+                                    possibilities of technology and its power to transform ideas into reality.
+                                    My journey began with curiosity about how things work behind the screen,
                                     which evolved into a deep love for creating intelligent, user-centric solutions.
-                                </p>
-                                
-
-                                <p className="text-sm sm:text-base text-white/70 leading-relaxed font-light">
-                                    With over 3 years of experience and 25+ projects under my belt, I specialize in full-stack
-                                    development with a particular focus on modern web technologies. I believe in writing clean,
-                                    scalable code that not only solves problems but creates delightful user experiences.
-                                </p>
-                                <p className="text-sm sm:text-base text-white/70 leading-relaxed font-light">
-                                    When I&rsquo;m not coding, you&rsquo;ll find me exploring the latest AI innovations, contributing to
-                                    open-source projects, or sharing my insights through technical writing on Medium.
                                 </p>
                             </div>
                         </div>
@@ -155,7 +144,7 @@ const AboutMe = () => {
                                         description:
                                             'Focusing on algorithms, full-stack development and maintaining a strong academic record while entering coding competitions and hackathons.',
                                         bullets: ['Completed first year with an average 79 %',
-                                                  'Completed second year with an average 78 %',],
+                                            'Completed second year with an average 78 %',],
                                     },
                                     {
                                         period: 'Jan 2023 – Sep 2023',
@@ -188,42 +177,6 @@ const AboutMe = () => {
                                     </div>
                                 ))}
                             </div>
-                        </div>
-                    </div>
-
-                    {/* Philosophy Section */}
-                    <div className="text-center max-w-4xl mx-auto">
-                        <h3 className="text-xl sm:text-2xl font-semibold mb-8">Philosophy</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            {[
-                                {
-                                    icon: <Users className="w-6 h-6" />,
-                                    title: 'Collaboration',
-                                    description: 'Great software is built by great teams working together'
-                                },
-                                {
-                                    icon: <Rocket className="w-6 h-6" />,
-                                    title: 'Innovation',
-                                    description: 'Always pushing boundaries and exploring new possibilities'
-                                },
-                                {
-                                    icon: <Target className="w-6 h-6" />,
-                                    title: 'Impact',
-                                    description: 'Creating solutions that make a real difference in people&rsquo;s lives'
-                                }
-                            ].map(({ icon, title, description }) => (
-                                <div key={title} className="group text-center">
-                                    <div className="w-16 h-16 border border-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:border-white/40 group-hover:bg-white/5 transition-all duration-300">
-                                        <div className="text-white/60 group-hover:text-white transition-colors">
-                                            {icon}
-                                        </div>
-                                    </div>
-                                    <h4 className="font-semibold mb-2 group-hover:text-white/90 transition-colors">{title}</h4>
-                                    <p className="text-sm text-white/70 leading-relaxed group-hover:text-white/80 transition-colors">
-                                        {description}
-                                    </p>
-                                </div>
-                            ))}
                         </div>
                     </div>
 

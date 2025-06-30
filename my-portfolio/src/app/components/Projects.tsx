@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Github, ExternalLink, Calendar } from 'lucide-react';
+import ballerinaElastic from '../assets/projects/ballerinax-elasticcloud.png';
 
 const Projects = () => {
   const projects = [
@@ -11,52 +12,7 @@ const Projects = () => {
       technologies: ["Ballerina", "Elasticsearch", "Java", "Docker", "Gradle", "REST API"],
       github: "https://github.com/yasithrashan/module-ballerinax-elasticsearch",
       demo: "",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop",
-      date: "2025"
-    },
-    {
-      name: "University Management App - Spacefix",
-      description: "A comprehensive university management system enabling seamless student enrollment, course management, and faculty administration.",
-      technologies: ["React", "Node.js", "Firebase", "JavaScript"],
-      github: "https://github.com/yasithrashan/Spacefix-app",
-      demo: "https://www.spacefix.lk/",
-      image: "https://images.unsplash.com/photo-1590579491624-f98f36d4c763?q=80&w=2043&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      date: "2024"
-    },
-    {
-      name: "Real-Time Event Ticketing System",
-      description: "A dynamic event ticketing platform that provides real-time seat availability, secure bookings.",
-      technologies: ["Java", "OOP", "Spring Boot", "React"],
-      github: "https://github.com/yasithrashan/Real-Time-Event-Ticketing-System",
-      demo: "",
-      image: "https://images.unsplash.com/photo-1606021643583-b707947f1f02?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      date: "2024"
-    },
-    {
-      name: "Personal Portfolio",
-      description: "A sleek and responsive personal portfolio website showcasing my projects, skills, and experience, built with React and Tailwind CSS.",
-      technologies: ["React", "Tailwind CSS", "JavaScript"],
-      github: "https://github.com/yasithrashan/Yasith-Rashan-Portfolio",
-      demo: "https://www.yasithrashan.online/",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      date: "2025"
-    },
-    {
-      name: "Network Flow Algorithm Implementation",
-      description: "An implementation of the Ford-Fulkerson algorithm with the Edmonds-Karp improvement for finding maximum flow in a network. Handles integer capacities and follows the conservation of flow principle.",
-      technologies: ["Java", "OOP", "Algorithms", "Data Structures", "Graph Theory"],
-      github: "https://github.com/yasithrashan/network-flow-algorithm",
-      demo: "",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      date: "2025"
-    },
-    {
-      name: "Bookstore RESTful API",
-      description: "A comprehensive JAX-RS API for a bookstore application with endpoints for managing books, authors, customers, shopping carts, and orders following REST architectural principles.",
-      technologies: ["Java", "JAX-RS", "REST API", "JSON", "Maven", "Java 21"],
-      github: "https://github.com/yasithrashan/BookStoreAPIWebApplication",
-      demo: "",
-      image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=2090&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: ballerinaElastic,
       date: "2025"
     }
   ];
@@ -92,13 +48,13 @@ const Projects = () => {
                     {/* Project Image */}
                     <div className="lg:w-80 flex-shrink-0">
                       <div className="relative overflow-hidden rounded-lg border border-white/20 group-hover:border-white/40 transition-colors">
-                        <img 
-                          src={project.image} 
+                        <img
+                          src={project.image.src}
                           alt={project.name}
                           className="w-full h-48 lg:h-56 object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
-                        
+
                         {/* Date Badge */}
                         <div className="absolute top-3 left-3">
                           <div className="flex items-center space-x-1 px-2 py-1 bg-black/60 backdrop-blur-sm rounded-full border border-white/20">
@@ -185,7 +141,7 @@ const Projects = () => {
           {/* Call to Action */}
           <div className="text-center">
             <p className="text-white/70 mb-8 max-w-2xl mx-auto">
-              Want to see more of my work or collaborate on a project? 
+              Want to see more of my work or collaborate on a project?
               Check out my GitHub for additional repositories and contributions.
             </p>
             <a

@@ -99,10 +99,10 @@ const AboutMe = () => {
                                         title: 'Software Engineering Intern',
                                         organization: 'WSO2',
                                         description:
-                                            "Working with the Engineering team to develop and enhance WSO2's enterprise middleware solutions and open-source integration platform.",
+                                            "Working with the Ballerina AI team to develop and enhance AI-powered features for the Ballerina programming language and related tools.",
                                         bullets: [
-                                            'Onboarded to the Engineering team and familiarised with WSO2\'s products and dev environment',
-                                            'Collaborating with mentors and senior engineers on project workflows and codebases',
+                                            'Onboarded to the Ballerina AI team and familiarised with AI integration workflows and development environment',
+                                            'Currently working on code indexing for Ballerina BI Copilot to enhance intelligent code assistance capabilities',
                                         ],
                                     },
                                 ].map((item, index) => (

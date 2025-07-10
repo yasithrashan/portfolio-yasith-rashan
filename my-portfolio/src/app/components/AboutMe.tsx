@@ -1,35 +1,122 @@
 'use client';
 
 import React from 'react';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 import { Code, Brain, Lightbulb, Target } from 'lucide-react';
 
 const AboutMe = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                delayChildren: 0.3,
+                staggerChildren: 0.2
+            }
+        }
+    } as const;
+
+    const itemVariants = {
+        hidden: { y: 50, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.8,
+                ease: "easeOut"
+            }
+        }
+    } as const;
+
+    const skills = [
+        {
+            icon: <Code className="w-5 h-5" />,
+            label: 'Clean Code',
+            desc: 'Maintainable & scalable solutions'
+        },
+        {
+            icon: <Brain className="w-5 h-5" />,
+            label: 'AI Integration',
+            desc: 'Intelligent feature development'
+        },
+        {
+            icon: <Lightbulb className="w-5 h-5" />,
+            label: 'Innovation',
+            desc: 'Creative problem solving'
+        },
+        {
+            icon: <Target className="w-5 h-5" />,
+            label: 'User Focus',
+            desc: 'Human-centered design'
+        }
+    ];
+
     return (
-        <div className="bg-gray-50 text-gray-900 relative overflow-hidden">
+        <div className="bg-gray-50 text-gray-900 relative overflow-hidden" ref={ref}>
             {/* Main Content */}
             <div className="relative z-10 px-6 sm:px-10 md:px-16 lg:px-24 py-24">
-                <div className="max-w-full sm:max-w-4xl mx-auto text-center">
+                <motion.div
+                    className="max-w-full sm:max-w-4xl mx-auto text-center"
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                >
 
                     {/* Section Header */}
-                    <div className="mb-16">
-                        <div className="flex items-center justify-center space-x-3 mb-8">
-                            <div className="h-px bg-gray-300 w-12 sm:w-16"></div>
+                    <motion.div
+                        className="mb-16"
+                        variants={itemVariants}
+                    >
+                        <motion.div
+                            className="flex items-center justify-center space-x-3 mb-8"
+                            initial={{ opacity: 0 }}
+                            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                            transition={{ duration: 0.6 }}
+                        >
+                            <motion.div
+                                className="h-px bg-gray-300 w-12 sm:w-16"
+                                initial={{ scaleX: 0 }}
+                                animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+                                transition={{ duration: 0.8, delay: 0.2 }}
+                            />
                             <p className="text-sm sm:text-base text-gray-600 font-light tracking-wide uppercase">
                                 About Me
                             </p>
-                            <div className="h-px bg-gray-300 w-12 sm:w-16"></div>
-                        </div>
+                            <motion.div
+                                className="h-px bg-gray-300 w-12 sm:w-16"
+                                initial={{ scaleX: 0 }}
+                                animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+                                transition={{ duration: 0.8, delay: 0.2 }}
+                            />
+                        </motion.div>
 
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-light tracking-tight leading-tight mb-6">
+                        <motion.h2
+                            className="text-3xl sm:text-4xl md:text-5xl font-light tracking-tight leading-tight mb-6"
+                            initial={{ y: 30, opacity: 0 }}
+                            animate={isInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
+                            transition={{ duration: 0.8, delay: 0.4 }}
+                        >
                             <span className="block font-medium">Crafting Digital</span>
                             <span className="block text-gray-500">Experiences</span>
-                        </h2>
-                    </div>
+                        </motion.h2>
+                    </motion.div>
 
                     {/* Main Content Grid */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-16 text-left">
+                    <motion.div
+                        className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-16 text-left"
+                        variants={itemVariants}
+                    >
                         {/* Left Column - Story */}
-                        <div className="space-y-6">
+                        <motion.div
+                            className="space-y-6"
+                            initial={{ opacity: 0, x: -50 }}
+                            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+                            transition={{ duration: 0.8, delay: 0.6 }}
+                        >
                             <div className="space-y-4">
                                 <h3 className="text-xl sm:text-2xl font-medium mb-4">My Journey</h3>
                                 <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-light">
@@ -40,57 +127,76 @@ const AboutMe = () => {
                                     which evolved into a deep love for creating intelligent, user-centric solutions.
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
 
                         {/* Right Column - Skills & Approach */}
-                        <div className="space-y-8">
+                        <motion.div
+                            className="space-y-8"
+                            initial={{ opacity: 0, x: 50 }}
+                            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+                            transition={{ duration: 0.8, delay: 0.8 }}
+                        >
                             <div>
                                 <h3 className="text-xl sm:text-2xl font-medium mb-6">What I Bring</h3>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    {[
-                                        {
-                                            icon: <Code className="w-5 h-5" />,
-                                            label: 'Clean Code',
-                                            desc: 'Maintainable & scalable solutions'
-                                        },
-                                        {
-                                            icon: <Brain className="w-5 h-5" />,
-                                            label: 'AI Integration',
-                                            desc: 'Intelligent feature development'
-                                        },
-                                        {
-                                            icon: <Lightbulb className="w-5 h-5" />,
-                                            label: 'Innovation',
-                                            desc: 'Creative problem solving'
-                                        },
-                                        {
-                                            icon: <Target className="w-5 h-5" />,
-                                            label: 'User Focus',
-                                            desc: 'Human-centered design'
+                                <motion.div
+                                    className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+                                    initial="hidden"
+                                    animate={isInView ? "visible" : "hidden"}
+                                    variants={{
+                                        hidden: {},
+                                        visible: {
+                                            transition: {
+                                                staggerChildren: 0.1,
+                                                delayChildren: 1
+                                            }
                                         }
-                                    ].map(({ icon, label, desc }) => (
-                                        <div key={label} className="group">
+                                    }}
+                                >
+                                    {skills.map(({ icon, label, desc }) => (
+                                        <motion.div
+                                            key={label}
+                                            className="group"
+                                            variants={{
+                                                hidden: { opacity: 0, scale: 0.8 },
+                                                visible: { opacity: 1, scale: 1 }
+                                            }}
+                                            whileHover={{ y: -5 }}
+                                        >
                                             <div className="border border-gray-200 rounded-lg p-4 hover:border-gray-300 hover:bg-white transition-all duration-300">
                                                 <div className="flex items-center space-x-3 mb-2">
-                                                    <div className="text-gray-500 group-hover:text-gray-900 transition-colors">
+                                                    <motion.div
+                                                        className="text-gray-500 group-hover:text-gray-900 transition-colors"
+                                                        whileHover={{ rotate: 360 }}
+                                                        transition={{ duration: 0.3 }}
+                                                    >
                                                         {icon}
-                                                    </div>
+                                                    </motion.div>
                                                     <span className="font-medium text-sm sm:text-base">{label}</span>
                                                 </div>
                                                 <p className="text-xs sm:text-sm text-gray-500 group-hover:text-gray-600 transition-colors">
                                                     {desc}
                                                 </p>
                                             </div>
-                                        </div>
+                                        </motion.div>
                                     ))}
-                                </div>
+                                </motion.div>
                             </div>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
 
                     {/* Experience */}
-                    <div className="mb-16">
-                        <h3 className="text-xl sm:text-2xl font-medium mb-8 text-center">Experience</h3>
+                    <motion.div
+                        className="mb-16"
+                        variants={itemVariants}
+                    >
+                        <motion.h3
+                            className="text-xl sm:text-2xl font-medium mb-8 text-center"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                            transition={{ duration: 0.6, delay: 1.2 }}
+                        >
+                            Experience
+                        </motion.h3>
                         <div className="max-w-4xl mx-auto">
                             <div className="space-y-8">
                                 {[
@@ -106,7 +212,14 @@ const AboutMe = () => {
                                         ],
                                     },
                                 ].map((item, index) => (
-                                    <div key={index} className="flex flex-col sm:flex-row gap-6 group text-left">
+                                    <motion.div
+                                        key={index}
+                                        className="flex flex-col sm:flex-row gap-6 group text-left"
+                                        initial={{ opacity: 0, x: -30 }}
+                                        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+                                        transition={{ duration: 0.8, delay: 1.4 + index * 0.2 }}
+                                        whileHover={{ x: 10 }}
+                                    >
                                         <div className="sm:w-40 flex-shrink-0">
                                             <span className="text-sm text-gray-500 font-mono">{item.period}</span>
                                         </div>
@@ -120,19 +233,36 @@ const AboutMe = () => {
 
                                             <ul className="list-disc pl-5 mt-2 space-y-1 text-gray-600 text-xs sm:text-sm">
                                                 {item.bullets.map((b, i) => (
-                                                    <li key={i}>{b}</li>
+                                                    <motion.li
+                                                        key={i}
+                                                        initial={{ opacity: 0, x: -10 }}
+                                                        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+                                                        transition={{ duration: 0.5, delay: 1.6 + i * 0.1 }}
+                                                    >
+                                                        {b}
+                                                    </motion.li>
                                                 ))}
                                             </ul>
                                         </div>
-                                    </div>
+                                    </motion.div>
                                 ))}
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Education */}
-                    <div className="mb-16">
-                        <h3 className="text-xl sm:text-2xl font-medium mb-8 text-center">Education</h3>
+                    <motion.div
+                        className="mb-16"
+                        variants={itemVariants}
+                    >
+                        <motion.h3
+                            className="text-xl sm:text-2xl font-medium mb-8 text-center"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                            transition={{ duration: 0.6, delay: 1.8 }}
+                        >
+                            Education
+                        </motion.h3>
                         <div className="max-w-4xl mx-auto">
                             <div className="space-y-8">
                                 {[
@@ -154,7 +284,14 @@ const AboutMe = () => {
                                         bullets: ['Achieved a Merit Pass'],
                                     },
                                 ].map((item, index) => (
-                                    <div key={index} className="flex flex-col sm:flex-row gap-6 group text-left">
+                                    <motion.div
+                                        key={index}
+                                        className="flex flex-col sm:flex-row gap-6 group text-left"
+                                        initial={{ opacity: 0, x: -30 }}
+                                        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+                                        transition={{ duration: 0.8, delay: 2 + index * 0.2 }}
+                                        whileHover={{ x: 10 }}
+                                    >
                                         <div className="sm:w-40 flex-shrink-0">
                                             <span className="text-sm text-gray-500 font-mono">{item.period}</span>
                                         </div>
@@ -168,41 +305,79 @@ const AboutMe = () => {
 
                                             <ul className="list-disc pl-5 mt-2 space-y-1 text-gray-600 text-xs sm:text-sm">
                                                 {item.bullets.map((b, i) => (
-                                                    <li key={i}>{b}</li>
+                                                    <motion.li
+                                                        key={i}
+                                                        initial={{ opacity: 0, x: -10 }}
+                                                        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+                                                        transition={{ duration: 0.5, delay: 2.2 + index * 0.2 + i * 0.1 }}
+                                                    >
+                                                        {b}
+                                                    </motion.li>
                                                 ))}
                                             </ul>
                                         </div>
-                                    </div>
+                                    </motion.div>
                                 ))}
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Call to Action */}
-                    <div className="mt-16">
-                        <p className="text-gray-600 mb-8 max-w-xl mx-auto text-sm sm:text-base font-light leading-relaxed">
+                    <motion.div
+                        className="mt-16"
+                        variants={itemVariants}
+                    >
+                        <motion.p
+                            className="text-gray-600 mb-8 max-w-xl mx-auto text-sm sm:text-base font-light leading-relaxed"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                            transition={{ duration: 0.6, delay: 2.6 }}
+                        >
                             I&rsquo;m always excited to connect with fellow developers, discuss new opportunities,
                             or collaborate on interesting projects. Let&rsquo;s build something amazing together.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-xs mx-auto">
-                            <button className="px-6 py-3 bg-gray-900 text-white font-medium rounded-full hover:bg-gray-800 transition transform hover:scale-105">
+                        </motion.p>
+                        <motion.div
+                            className="flex flex-col sm:flex-row gap-4 justify-center max-w-xs mx-auto"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                            transition={{ duration: 0.6, delay: 2.8 }}
+                        >
+                            <motion.button
+                                className="px-6 py-3 bg-gray-900 text-white font-medium rounded-full hover:bg-gray-800 transition"
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
                                 Let&apos;s Connect
-                            </button>
-                            <button className="px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-full hover:bg-gray-50 hover:border-gray-400 transition">
+                            </motion.button>
+                            <motion.button
+                                className="px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-full hover:bg-gray-50 hover:border-gray-400 transition"
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
                                 View Resume
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                            </motion.button>
+                        </motion.div>
+                    </motion.div>
+                </motion.div>
             </div>
 
             {/* Decorative Lines */}
-            <div className="absolute left-0 top-1/2 transform -translate-y-1/2 hidden lg:block">
+            <motion.div
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 hidden lg:block"
+                initial={{ opacity: 0, x: -20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                transition={{ duration: 1, delay: 0.5 }}
+            >
                 <div className="w-px h-32 bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
-            </div>
-            <div className="absolute right-0 top-1/2 transform -translate-y-1/2 hidden lg:block">
+            </motion.div>
+            <motion.div
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 hidden lg:block"
+                initial={{ opacity: 0, x: 20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
+                transition={{ duration: 1, delay: 0.5 }}
+            >
                 <div className="w-px h-32 bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
-            </div>
+            </motion.div>
         </div>
     );
 };

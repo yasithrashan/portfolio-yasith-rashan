@@ -3,9 +3,6 @@ export const metadata = {
   description: "Welcome to my personal portfolio website.",
   keywords: ["Yasith Rashan", "Yasith", "Portfolio"],
   authors: [{ name: "Yasith Rashan" }],
-  // icons: {
-  //   icon: "/logo.svg",
-  // },
 };
 
 
@@ -13,13 +10,13 @@ export const metadata = {
 import AboutMe from "./components/AboutMe";
 import Achievements from "./components/Achievements";
 import Footer from "./components/Footer";
-import HeroSection from "./components/HeroSection";
+import Header from "./components/Header";
 import Projects from "./components/Projects";
 
 export default function Home() {
   return (
     <div>
-      <HeroSection />
+      <Header />
       <AboutMe />
       <Projects />
       <Achievements />

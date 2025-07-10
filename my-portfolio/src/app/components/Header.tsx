@@ -7,7 +7,7 @@ import profilePic from '../assets/profile-img.jpg';
 import { Github, Linkedin, Mail, ExternalLink, PenLine, ArrowDown } from 'lucide-react';
 import { FaInstagram, FaFacebookF, FaXTwitter } from 'react-icons/fa6';
 
-const HeroSection = () => {
+const Header = () => {
   const scrollToProjects = () => {
     const projectsSection = document.getElementById('projects');
     if (projectsSection) {
@@ -190,4 +190,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default Header;

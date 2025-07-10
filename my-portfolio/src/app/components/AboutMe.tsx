@@ -5,10 +5,10 @@ import { Code, Brain, Lightbulb, Target } from 'lucide-react';
 
 const AboutMe = () => {
     return (
-        <div className="min-h-screen bg-black text-white relative overflow-hidden">
+        <div className="bg-black text-white relative overflow-hidden">
             {/* Main Content */}
-            <div className="relative z-10 min-h-screen flex items-center justify-center px-6 sm:px-10 md:px-16 lg:px-24 py-20">
-                <div className="max-w-full sm:max-w-6xl">
+            <div className="relative z-10 px-6 sm:px-10 md:px-16 lg:px-24 py-20">
+                <div className="max-w-full sm:max-w-6xl mx-auto">
 
                     {/* Section Header */}
                     <div className="text-center mb-16">

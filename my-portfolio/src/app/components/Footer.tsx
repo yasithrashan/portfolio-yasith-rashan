@@ -15,12 +15,12 @@ const Footer = () => {
     // Smooth animated scroll to top
     const startTime = performance.now();
 
-    const animateScroll = (currentTime) => {
+    const animateScroll = (currentTime: number) => {
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
 
       // Easing function for smooth animation
-      const easeInOutCubic = progress => {
+      const easeInOutCubic = (progress: number) => {
         return progress < 0.5
           ? 4 * progress * progress * progress
           : (progress - 1) * (2 * progress - 2) * (2 * progress - 2) + 1;

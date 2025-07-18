@@ -207,13 +207,11 @@ const AboutMe = () => {
                                         description:
                                             'Working with the Ballerina AI team to develop AI-powered features for the Ballerina programming language and developer tools.',
                                         bullets: [
-                                            'Developed a Ballerina connector for Elastic Cloud by integrating the `ballerinax/elastic.elasticcloud` package, enabling seamless interaction with Elasticsearch deployments, cluster management, and security configurations.',
-                                            'Contributed to Code Indexing for BI Copilot, a research-driven initiative to reduce LLM token usage and improve response relevance in large codebases.',
-                                            'Designed a static analysis pipeline using Ballerina compiler APIs to construct per-query dependency graphs for precise code extraction.',
-                                            'Integrated vector embedding and similarity search to retrieve relevant source files and symbols based on developer context, reducing latency and enhancing code intelligence in Ballerina Copilot.',
+                                            'Developed Elastic Cloud connector for Ballerina',
+                                            'Working on a code indexing system for Ballerina Copilot using compiler APIs and vector embeddings to reduce LLM token usage.',
+                                            'Contributed to the Ballerina AI Copilot project',
                                         ],
                                     },
-
                                 ].map((item, index) => (
                                     <motion.div
                                         key={index}

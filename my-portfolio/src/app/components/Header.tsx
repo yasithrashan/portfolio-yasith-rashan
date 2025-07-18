@@ -217,7 +217,7 @@ const Header = () => {
                 }
               }}
             >
-              {['Next.js', 'React', 'TypeScript', 'Node.js', 'Tailwind', 'MongoDB'].map((tech) => (
+              {['Next.js', 'React', 'TypeScript', 'Node.js', 'Python', 'Java', 'LangChain', 'Prompt Engineering'].map((tech) => (
                 <motion.span
                   key={tech}
                   className="px-3 py-1 border border-gray-200 rounded-full text-xs sm:text-sm text-gray-600 hover:border-gray-300 hover:text-gray-800 transition cursor-default"
